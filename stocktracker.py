@@ -28,3 +28,4 @@ for value in tickers.values():
   row.NumOfStock = value['Holdings']
   row.Amount = float(round(row.Current_Price * value['Holdings'], 2))
   row.Profit = float(row.Amount - value['Buy Price'])
+  value['Profit'] = float(row.Amount - value['Buy Price'])
